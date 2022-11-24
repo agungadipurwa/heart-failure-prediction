@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import requests
 
-df = pd.read_csv("model\heart.csv")
+df = pd.read_csv("heart.csv")
 # Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS, RestingECG, MaxHR, ExerciseAngina, Oldpeak, ST_Slope, HeartDisease
 # 40, M, ATA, 140, 289, 0, Normal, 172, N, 0, Up, 0
 def run():
