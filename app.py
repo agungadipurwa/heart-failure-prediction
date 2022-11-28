@@ -7,16 +7,16 @@ df = pd.read_csv("heart.csv")
 # 40, M, ATA, 140, 289, 0, Normal, 172, N, 0, Up, 0
 def run():
     st.title("Heart Failure Prediction")
-    age = st.number_input("Age")
+    age = st.number_input("Age", format = "%d",step = 1)
     sex = st.selectbox("Sex", df.Sex.unique())
     chest_pain_type = st.selectbox("Chest Pain Type", df.ChestPainType.unique())
-    resting_bp = st.number_input("Resting BP")
-    cholesterol = st.number_input("Cholesterol")
+    resting_bp = st.number_input("Resting BP", format = "%d",step = 1)
+    cholesterol = st.number_input("Cholesterol", format="%d", step=1)
     fasting_bs = st.selectbox("Fasting BS", df.FastingBS.unique())
     resting_ecg = st.selectbox("Resting ECG",df.RestingECG.unique())
-    max_hr = st.number_input("Max HR")
+    max_hr = st.number_input("Max HR", format = "%d",step = 1)
     exercise_angina = st.selectbox("Exercise Angina", df.ExerciseAngina.unique())
-    oldpeak = st.number_input("Old Peak")
+    oldpeak = st.number_input("Old Peak", format = "%.1f",step=0.1)
     st_slope = st.selectbox("ST Slope", df.ST_Slope.unique())
 
     data ={
