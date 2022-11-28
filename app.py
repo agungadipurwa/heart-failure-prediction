@@ -20,17 +20,17 @@ def run():
     st_slope = st.selectbox("ST Slope", df.ST_Slope.unique())
 
     data ={
-        'Age': age,
-        'Sex': sex,
-        'ChestPainType': chest_pain_type, 
-        'RestingBP': resting_bp,
-        'Cholesterol': cholesterol,
-        'FastingBS': fasting_bs,
-        'RestingECG': resting_ecg,
-        'MaxHR': max_hr,
-        'ExerciseAngina': exercise_angina,
-        'Oldpeak': oldpeak,
-        'ST_Slope': st_slope
+        'Age': int(age),
+        'Sex': str(sex),
+        'ChestPainType': str(chest_pain_type), 
+        'RestingBP': int(resting_bp),
+        'Cholesterol': int(cholesterol),
+        'FastingBS': int(fasting_bs),
+        'RestingECG': str(resting_ecg),
+        'MaxHR': int(max_hr),
+        'ExerciseAngina': str(exercise_angina),
+        'Oldpeak': float(oldpeak),
+        'ST_Slope': str(st_slope)
     }
 
     if st.button("Predict"):
