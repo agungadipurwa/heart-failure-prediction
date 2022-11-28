@@ -34,7 +34,7 @@ def run():
     }
 
     if st.button("Predict"):
-        response = requests.post("http://127.0.0.1:8000/predict", json=data)
+        response = requests.post("http://ec2-108-137-4-27.ap-southeast-3.compute.amazonaws.com:8085/predict", json=data)
         prediction = response.text
         st.success(f"The prediction from model: {prediction}")
 if __name__ == '__main__':
