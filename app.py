@@ -34,7 +34,7 @@ def run():
     }
 
     if st.button("Predict"):
-        response = requests.post("http://ec2-108-137-4-27.ap-southeast-3.compute.amazonaws.com:8085/predict", json=data)
+        response = requests.post("http://ec2-108-137-4-27.ap-southeast-3.compute.amazonaws.com:8090/docs", json=data)
         prediction = response.text
         if prediction == "0":
             st.caption(f"The prediction from model: {prediction}")
